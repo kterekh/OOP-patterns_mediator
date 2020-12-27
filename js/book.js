@@ -1,11 +1,32 @@
 // book.js or any other name
-class Btn {
-  mediator = undefined
+class HorizontalMenu {
   constructor () {
-    // this.firstAuthorHorMenuBtn = document.getElementById('#firstAuthorHorMenuBtn')
+    this.firstAuthor = document.getElementsByClassName('firstAuthorHorizontal author')
+    this.secondAuthor = document.getElementsByClassName('secondAuthorHorizontal author')
+    this.thirdAuthor = document.getElementsByClassName('thirdAuthorHorizontal author')
   }
+
   dropDown () {
-    //dropdown functionality
+    //dropdown functionality for posts
+  }
+}
+
+class VerticalMenu {
+  constructor () {
+    this.firstAuthor = document.getElementsByClassName('firstAuthorHorizontal author')
+    this.secondAuthor = document.getElementsByClassName('secondAuthorHorizontal author')
+    this.thirdAuthor = document.getElementsByClassName('thirdAuthorHorizontal author')
+  }
+
+  dropDown () {
+    //dropdown functionality for posts
+  }
+}
+
+class Screen {
+  constructor () {
+    this.title = document.getElementsByClassName('title')
+    this.paragraph = document.getElementsByClassName('paragraph')
   }
 }
 
@@ -15,12 +36,14 @@ class Mediator {
   set firstAuthorHorMenuBtn (firstAuthorHorMenuBtn) {
     this.firstAuthorHorMenuBtn = firstAuthorHorMenuBtn
   }
-  showPost () {}
-  updateVerticalMenu () {}
-  updateHorizontalMenu() {}
+
+  showPost () {
+  }
+
+  updateVerticalMenu () {
+  }
+
+  updateHorizontalMenu () {
+  }
 }
 
-//app.js
-
-let firstAuthorHorMenuBtn = new Btn()
-let mediator = new Mediator()

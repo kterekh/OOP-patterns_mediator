@@ -130,11 +130,18 @@ const DOMStructureBook = {
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Post 1'
+              innerText: 'Post 1',
+              attrs: {
+                class: 'title'
+              }
             },
             {
               nodeName: 'p',
-              innerText: 'Description...'
+              innerText: 'Description...',
+              attrs: {
+                class: 'paragraph'
+              }
+
             }
           ]
         }
