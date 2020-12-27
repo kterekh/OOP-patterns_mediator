@@ -14,6 +14,9 @@ class HorizontalMenu {
       //  open first author posts by default
     })
   }
+  setMediator () {
+    this.mediator = mediator
+  }
 }
 
 class VerticalMenu {
@@ -32,6 +35,10 @@ class VerticalMenu {
       //  open first author posts by default
     })
   }
+  setMediator () {
+    this.mediator = mediator
+  }
+
 }
 
 class Screen {
@@ -64,7 +71,9 @@ class Mediator {
   }
 
 
-  showPost () {
+  showPost (e) {
+    // add only that elements, that will take part in this event
+    this.screen.setScreen(e)
   }
 
   updateVerticalMenu () {
@@ -81,3 +90,4 @@ let mediator = new Mediator(horizontalMenu, verticalMenu, screen)
 mediator.setHorizontalMenu(horizontalMenu)
 mediator.setVerticalMenu(verticalMenu)
 mediator.setScreen(screen)
+
