@@ -64,13 +64,21 @@ aside ul {
     flex-direction: column;
     padding: 0;
     text-decoration: none;
+    display: none;
 }
 
 header ul {
     display: flex;
     text-decoration: none;
     padding: 0;
+    display: none;
 }
+
+/*.firstAuthor li:first-child{*/
+/*    color: orangered;*/
+/*    font-weight: bold;*/
+/*}*/
+
 
 article {
     margin: 8px;

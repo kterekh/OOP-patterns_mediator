@@ -1,93 +1,160 @@
 class HorizontalMenu {
-  mediator = undefined
-
   constructor () {
     this.btns = document.querySelectorAll('.author')
+    this.posts = document.querySelectorAll('li')
+    this.dropDown()
   }
 
   dropDown () {
-    //add functionality of showing-hiding menu options on click (only for horizontal menu, and send signal to mediator and ask to update the vertical menu
-    this.btns.addEventListener('click', () => {
-      this.mediator.showPost()
-      this.mediator.updateHorizontalMenu()
-      this.mediator.updateVerticalMenu()
-      //  open first author posts by default
+    this.btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        switch (e.target.id) {
+          case 'fhh':
+            document.getElementById('fhu').style.display = 'flex'
+            document.getElementById('1vl').style.color = 'red'
+            document.getElementById('1vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            this.posts.forEach(post => {
+              post.addEventListener('click', (e) => {
+                  switch (e.target.id) {
+                    case '2hl':
+                      document.getElementById('2hl').style.color = 'red'
+                      document.getElementById('2hl').style.fontWeight = 'bold'
+                      // mediator.showPost(e.target.id)
+                  }
+                }
+              )
+            })
+
+            break
+          case 'shh':
+            document.getElementById('shu').style.display = 'flex'
+            document.getElementById('4vl').style.color = 'red'
+            document.getElementById('4vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'thh':
+            document.getElementById('thu').style.display = 'flex'
+            document.getElementById('7vl').style.color = 'red'
+            document.getElementById('7vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'fvh':
+            document.getElementById('fhu').style.display = 'flex'
+            document.getElementById('1hl').style.color = 'red'
+            document.getElementById('1hl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'svh':
+            document.getElementById('shu').style.display = 'flex'
+            document.getElementById('4hl').style.color = 'red'
+            document.getElementById('4hl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'tvh':
+            document.getElementById('thu').style.display = 'flex'
+            document.getElementById('7hl').style.color = 'red'
+            document.getElementById('7hl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+        }
+      })
     })
-  }
-  setMediator () {
-    this.mediator = mediator
   }
 }
 
 class VerticalMenu {
-  mediator = undefined
 
   constructor () {
     this.btns = document.querySelectorAll('.author')
+    this.dropDown()
   }
 
   dropDown () {
-    ///add functionality of showing-hiding menu options on click (only for vertical menu, and send signal to mediator and ask to update the horizontal menu
-    this.btns.addEventListener('click', () => {
-      this.mediator.showPost()
-      this.mediator.updateHorizontalMenu()
-      this.mediator.updateVerticalMenu()
-      //  open first author posts by default
+    this.btns.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        switch (e.target.id) {
+          case 'fhh':
+            document.getElementById('fvu').style.display = 'flex'
+            document.getElementById('1hl').style.color = 'red'
+            document.getElementById('1hl').style.fontWeight = 'bold'
+            mediator.updateHorizontalMenu(e.target.id)
+            break
+          case 'shh':
+            document.getElementById('svu').style.display = 'flex'
+            document.getElementById('4hl').style.color = 'red'
+            document.getElementById('4hl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'thh':
+            document.getElementById('tvu').style.display = 'flex'
+            document.getElementById('7hl').style.color = 'red'
+            document.getElementById('7hl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'fvh':
+            document.getElementById('fvu').style.display = 'flex'
+            document.getElementById('1vl').style.color = 'red'
+            document.getElementById('1vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'svh':
+            document.getElementById('svu').style.display = 'flex'
+            document.getElementById('4vl').style.color = 'red'
+            document.getElementById('4vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case 'tvh':
+            document.getElementById('tvu').style.display = 'flex'
+            document.getElementById('7vl').style.color = 'red'
+            document.getElementById('7vl').style.fontWeight = 'bold'
+            mediator.updateVerticalMenu(e.target.id)
+            break
+        }
+      })
     })
   }
-  setMediator () {
-    this.mediator = mediator
-  }
-
 }
 
 class Screen {
-  mediator = undefined
 
-  // has no own methods, only receives instructions from mediator
   constructor () {
     this.title = document.getElementsByClassName('title')
     this.paragraph = document.getElementsByClassName('paragraph')
   }
+
+  displayData () {
+    switch (e) {
+      case '2hl' :
+        this.title.innerHTML = 'Post 2'
+    }
+  }
+
 }
 
 class Mediator {
+
   constructor () {
-    horizontalMenu = undefined
-    verticalMenu = undefined
-    screen = undefined
+    this.horizontalMenu = new HorizontalMenu(this)
+    this.verticalMenu = new VerticalMenu(this)
+    this.screen = new Screen(this)
+    this.showPost()
+    this.updateVerticalMenu()
+    this.updateVerticalMenu()
   }
-
-  setHorizontalMenu () {
-    this.horizontalMenu = horizontalMenu
-  }
-
-  setVerticalMenu () {
-    this.verticalMenu = verticalMenu
-  }
-
-  setScreen () {
-    this.screen = screen
-  }
-
 
   showPost (e) {
-    // add only that elements, that will take part in this event
-    this.screen.setScreen(e)
+    debugger
+    this.screen.displayData(e)
   }
 
-  updateVerticalMenu () {
+  updateVerticalMenu (e) {
+    this.verticalMenu.dropDown(e)
   }
 
-  updateHorizontalMenu () {
+  updateHorizontalMenu (e) {
+    this.horizontalMenu.dropDown(e)
   }
 }
 
-let horizontalMenu = new HorizontalMenu()
-let verticalMenu = new VerticalMenu()
-let screen = new Screen()
-let mediator = new Mediator(horizontalMenu, verticalMenu, screen)
-mediator.setHorizontalMenu(horizontalMenu)
-mediator.setVerticalMenu(verticalMenu)
-mediator.setScreen(screen)
-
+const mediator = new Mediator()

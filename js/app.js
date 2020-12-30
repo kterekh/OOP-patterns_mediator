@@ -3,7 +3,7 @@ const renderDOM = (config, parent = document.body) => {
   //create element
   let newElement = document.createElement(nodeName)
   parent.append(newElement)
-  //set innerText & innerHTML
+  //set innerText & innerHTML & id
   if (config.hasOwnProperty('innerText')) {
     newElement.innerText = config.innerText
   } else if (config.hasOwnProperty('innerHTML')) {
@@ -36,27 +36,44 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'firstAuthorHorizontal author'
+            class: 'firstAuthor author',
+            id: 'fha'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 1'
+              innerText: 'Author 1',
+              attrs: {
+              id:'fhh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id:'fhu'
+              }
+              ,
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '1hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '2hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '3hl'
+                  }
                 }
               ]
             }
@@ -65,27 +82,43 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'secondAuthorHorizontal author'
+            class: 'secondAuthor author',
+              id: 'sha'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 2'
+              innerText: 'Author 2',
+              attrs: {
+                id:'shh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id:'shu'
+              },
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '4hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '5hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '6hl'
+                  }
                 }
               ]
             }
@@ -94,27 +127,43 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'thirdAuthorHorizontal author'
+            class: 'thirdAuthor author',
+              id: 'tha'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 3'
+              innerText: 'Author 3',
+              attrs: {
+                id:'thh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id:'thu'
+              },
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '7hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '8hl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '9hl'
+                  }
                 }
               ]
             }
@@ -153,27 +202,43 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'firstAuthorHorizontal author'
+            class: 'firstAuthor author',
+            id:'fva'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 1'
+              innerText: 'Author 1',
+              attrs: {
+                id:'fvh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id: 'fvu'
+              },
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '1vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '2vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '3vl'
+                  }
                 }
               ]
             }
@@ -182,27 +247,43 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'secondAuthorHorizontal author'
+            class: 'secondAuthor author',
+            id:'sva'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 2'
+              innerText: 'Author 2',
+              attrs: {
+                id:'svh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id: 'svu'
+              },
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '4vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '5vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '6vl'
+                  }
                 }
               ]
             }
@@ -211,27 +292,43 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'thirdAuthorHorizontal author'
+            class: 'thirdAuthor author',
+            id:'tva'
           },
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Author 3'
+              innerText: 'Author 3',
+              attrs: {
+                id:'tvh'
+              }
             },
             {
               nodeName: 'ul',
+              attrs:{
+                id: 'tvu'
+              },
               children: [
                 {
                   nodeName: 'li',
-                  innerText: 'Author 1'
+                  innerText: 'Post 1',
+                  attrs: {
+                    id: '7vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 2'
+                  innerText: 'Post 2',
+                  attrs: {
+                    id: '8vl'
+                  }
                 },
                 {
                   nodeName: 'li',
-                  innerText: 'Author 3'
+                  innerText: 'Post 3',
+                  attrs: {
+                    id: '9vl'
+                  }
                 }
               ]
             }
