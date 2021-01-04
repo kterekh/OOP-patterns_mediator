@@ -60,7 +60,6 @@ header h1 {
 }
 
 aside ul {
-    display: flex;
     flex-direction: column;
     padding: 0;
     text-decoration: none;
@@ -68,7 +67,6 @@ aside ul {
 }
 
 header ul {
-    display: flex;
     text-decoration: none;
     padding: 0;
     display: none;
