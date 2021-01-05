@@ -36,7 +36,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'firstAuthor author',
+            class: 'firstHAuthor author',
             id: 'fha'
           },
           children: [
@@ -58,7 +58,7 @@ const DOMStructureBook = {
                   nodeName: 'li',
                   innerText: 'Post 1',
                   attrs: {
-                    id: '1hl'
+                    id: '1hl',
                   }
                 },
                 {
@@ -82,7 +82,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'secondAuthor author',
+            class: 'secondHAuthor author',
               id: 'sha'
           },
           children: [
@@ -127,7 +127,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'thirdAuthor author',
+            class: 'thirdHAuthor author',
               id: 'tha'
           },
           children: [
@@ -202,7 +202,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'firstAuthor author',
+            class: 'firstVAuthor author',
             id:'fva'
           },
           children: [
@@ -247,7 +247,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'secondAuthor author',
+            class: 'secondVAuthor author',
             id:'sva'
           },
           children: [
@@ -292,7 +292,7 @@ const DOMStructureBook = {
         {
           nodeName: 'div',
           attrs: {
-            class: 'thirdAuthor author',
+            class: 'thirdVAuthor author',
             id:'tva'
           },
           children: [
