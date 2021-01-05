@@ -1,9 +1,9 @@
-const fontColor = 'red'
-const fontWeight = 'bold'
-const displayType = 'flex'
-
 function displayNone (buttons) {
-  buttons.style.display = 'none'
+  Array.from(buttons).forEach(button => button.style.display = displayDefault)
+}
+
+function removeBorder (buttons) {
+  Array.from(buttons).forEach(button => button.style.border = 'none')
 }
 
 class HorizontalMenu {
@@ -16,17 +16,29 @@ class HorizontalMenu {
   dropDown () {
     this.btns.forEach(btn => {
       btn.addEventListener('click', (e) => {
+        if (this.uls) {
+          displayNone(this.uls)
+        }
         switch (e.target.id) {
-          case 'fhh':
-            document.getElementById('fhu').style.display = displayType
-            document.getElementById('1hl').style.color = fontColor
-            document.getElementById('1hl').style.fontWeight = fontWeight
+          case headerOfFirstHorizontalAuthor:
+            document.getElementById(firstHorizontalUl).style.display = displayType
+            document.getElementById(firstPostOfFirstHorizontalAuthor).style.color = fontColor
+            document.getElementById(firstPostOfFirstHorizontalAuthor).style.fontWeight = fontWeight
+            document.getElementById(firstHorizontalBlock).style.border = blockStyle
             mediator.updateVerticalMenu(e.target.id)
             break
-          case 'shh':
-            document.getElementById('shu').style.display = displayType
-            document.getElementById('4hl').style.color = fontColor
-            document.getElementById('4hl').style.fontWeight = fontWeight
+          case headerOfSecondHorizontalAuthor:
+            document.getElementById(secondHorizontalUl).style.display = displayType
+            document.getElementById(firstPostOfSecondHorizontalAuthor).style.color = fontColor
+            document.getElementById(firstPostOfSecondHorizontalAuthor).style.fontWeight = fontWeight
+            document.getElementById(secondHorizontalBlock).style.border = blockStyle
+            mediator.updateVerticalMenu(e.target.id)
+            break
+          case headerOfThirdHorizontalAuthor:
+            document.getElementById(thirdHorizontalUl).style.display = displayType
+            document.getElementById(firstPostOfThirdHorizontalAuthor).style.color = fontColor
+            document.getElementById(firstPostOfThirdHorizontalAuthor).style.fontWeight = fontWeight
+            document.getElementById(thirdHorizontalBlock).style.border = blockStyle
             mediator.updateVerticalMenu(e.target.id)
             break
         }
@@ -45,15 +57,23 @@ class VerticalMenu {
 
   dropDown (e) {
     switch (e) {
-      case 'fhh':
-        document.getElementById('fvu').style.display = displayType
-        document.getElementById('1vl').style.color = fontColor
-        document.getElementById('1vl').style.fontWeight = fontWeight
+      case headerOfFirstHorizontalAuthor:
+        document.getElementById(firstVerticalUl).style.display = displayType
+        document.getElementById(firstPostOfFirstVerticalAuthor).style.color = fontColor
+        document.getElementById(firstPostOfFirstVerticalAuthor).style.fontWeight = fontWeight
+        document.getElementById(firstVerticalBlock).style.border = blockStyle
         break
-      case 'shh':
-        document.getElementById('svu').style.display = displayType
-        document.getElementById('4vl').style.color = fontColor
-        document.getElementById('4vl').style.fontWeight = fontWeight
+      case headerOfSecondHorizontalAuthor:
+        document.getElementById(secondVerticalUl).style.display = displayType
+        document.getElementById(firstPostOfSecondVerticalAuthor).style.color = fontColor
+        document.getElementById(firstPostOfSecondVerticalAuthor).style.fontWeight = fontWeight
+        document.getElementById(secondVerticalBlock).style.border = blockStyle
+        break
+      case headerOfThirdHorizontalAuthor:
+        document.getElementById(thirdVerticalUl).style.display = displayType
+        document.getElementById(firstPostOfThirdVerticalAuthor).style.color = fontColor
+        document.getElementById(firstPostOfThirdVerticalAuthor).style.fontWeight = fontWeight
+        document.getElementById(thirdVerticalBlock).style.border = blockStyle
         break
     }
   }
