@@ -44,13 +44,13 @@ const DOMStructureBook = {
               nodeName: 'h1',
               innerText: 'Author 1',
               attrs: {
-              id:'fhh'
+                id: 'fhh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
-                id:'fhu'
+              attrs: {
+                id: 'fhu'
               }
               ,
               children: [
@@ -58,7 +58,7 @@ const DOMStructureBook = {
                   nodeName: 'li',
                   innerText: 'Post 1',
                   attrs: {
-                    id: '1hl',
+                    id: '1hl'
                   }
                 },
                 {
@@ -83,20 +83,20 @@ const DOMStructureBook = {
           nodeName: 'div',
           attrs: {
             class: 'secondHAuthor horizontalAuthor author',
-              id: 'sha'
+            id: 'sha'
           },
           children: [
             {
               nodeName: 'h1',
               innerText: 'Author 2',
               attrs: {
-                id:'shh'
+                id: 'shh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
-                id:'shu'
+              attrs: {
+                id: 'shu'
               },
               children: [
                 {
@@ -128,20 +128,20 @@ const DOMStructureBook = {
           nodeName: 'div',
           attrs: {
             class: 'thirdHAuthor horizontalAuthor author',
-              id: 'tha'
+            id: 'tha'
           },
           children: [
             {
               nodeName: 'h1',
               innerText: 'Author 3',
               attrs: {
-                id:'thh'
+                id: 'thh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
-                id:'thu'
+              attrs: {
+                id: 'thu'
               },
               children: [
                 {
@@ -179,14 +179,13 @@ const DOMStructureBook = {
           children: [
             {
               nodeName: 'h1',
-              innerText: 'Post 1',
+                innerText: 'Choose your author...',
               attrs: {
                 class: 'title'
               }
             },
             {
               nodeName: 'p',
-              innerText: 'Description...',
               attrs: {
                 class: 'paragraph'
               }
@@ -203,19 +202,19 @@ const DOMStructureBook = {
           nodeName: 'div',
           attrs: {
             class: 'firstVAuthor verticalAuthor author',
-            id:'fva'
+            id: 'fva'
           },
           children: [
             {
               nodeName: 'h1',
               innerText: 'Author 1',
               attrs: {
-                id:'fvh'
+                id: 'fvh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
+              attrs: {
                 id: 'fvu'
               },
               children: [
@@ -248,19 +247,19 @@ const DOMStructureBook = {
           nodeName: 'div',
           attrs: {
             class: 'secondVAuthor verticalAuthor author',
-            id:'sva'
+            id: 'sva'
           },
           children: [
             {
               nodeName: 'h1',
               innerText: 'Author 2',
               attrs: {
-                id:'svh'
+                id: 'svh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
+              attrs: {
                 id: 'svu'
               },
               children: [
@@ -293,19 +292,19 @@ const DOMStructureBook = {
           nodeName: 'div',
           attrs: {
             class: 'thirdVAuthor verticalAuthor author',
-            id:'tva'
+            id: 'tva'
           },
           children: [
             {
               nodeName: 'h1',
               innerText: 'Author 3',
               attrs: {
-                id:'tvh'
+                id: 'tvh'
               }
             },
             {
               nodeName: 'ul',
-              attrs:{
+              attrs: {
                 id: 'tvu'
               },
               children: [

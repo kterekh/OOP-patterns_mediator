@@ -30,13 +30,6 @@ const thirdPostOfSecondVerticalAuthor = '6vl'
 const firstPostOfThirdVerticalAuthor = '7vl'
 const secondPostOfThirdVerticalAuthor = '8vl'
 const thirdPostOfThirdVerticalAuthor = '9vl'
-//headers
-const headerOfFirstHorizontalAuthor = 'fhh'
-const headerOfSecondHorizontalAuthor = 'shh'
-const headerOfThirdHorizontalAuthor = 'thh'
-const headerOfFirstVerticalAuthor = 'fvh'
-const headerOfSecondVerticalAuthor = 'svh'
-const headerOfThirdVerticalAuthor = 'tvh'
 // blocks
 const firstHorizontalBlock = 'fha'
 const secondHorizontalBlock = 'sha'

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/book.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/const.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <workItem from="1609844500815" duration="11097000" />
       <workItem from="1610357031968" duration="1026000" />
       <workItem from="1610372265359" duration="1188000" />
-      <workItem from="1610442668366" duration="13704000" />
+      <workItem from="1610442668366" duration="26070000" />
     </task>
     <servers />
   </component>
@@ -82,10 +83,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1609854756826">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1610531458606">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1609854756826" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1610531458606" />
     <state width="1515" height="206" key="GridCell.Tab.0.bottom" timestamp="1609761199298">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
