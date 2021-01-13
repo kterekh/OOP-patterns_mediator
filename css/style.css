@@ -82,9 +82,14 @@ article {
     margin: 8px;
 }
 
-article h1  {
+article h1 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
 
+p {
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+}

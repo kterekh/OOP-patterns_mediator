@@ -55,14 +55,17 @@ class HorizontalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfFirstHorizontalAuthor:
                     this.addStyleForPost(firstPostOfFirstHorizontalAuthor)
+                    this.addStyleForPost(firstPostOfFirstVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfFirstHorizontalAuthor:
                     this.addStyleForPost(secondPostOfFirstHorizontalAuthor)
+                    this.addStyleForPost(secondPostOfFirstVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfFirstHorizontalAuthor:
                     this.addStyleForPost(thirdPostOfFirstHorizontalAuthor)
+                    this.addStyleForPost(thirdPostOfFirstVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -84,14 +87,17 @@ class HorizontalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfSecondHorizontalAuthor:
                     this.addStyleForPost(firstPostOfSecondHorizontalAuthor)
+                    this.addStyleForPost(firstPostOfSecondVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfSecondHorizontalAuthor:
                     this.addStyleForPost(secondPostOfSecondHorizontalAuthor)
+                    this.addStyleForPost(secondPostOfSecondVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfSecondHorizontalAuthor:
                     this.addStyleForPost(thirdPostOfSecondHorizontalAuthor)
+                    this.addStyleForPost(thirdPostOfSecondVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -113,14 +119,17 @@ class HorizontalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfThirdHorizontalAuthor:
                     this.addStyleForPost(firstPostOfThirdHorizontalAuthor)
+                    this.addStyleForPost(firstPostOfThirdVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfThirdHorizontalAuthor:
                     this.addStyleForPost(secondPostOfThirdHorizontalAuthor)
+                    this.addStyleForPost(secondPostOfThirdVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfThirdHorizontalAuthor:
                     this.addStyleForPost(thirdPostOfThirdHorizontalAuthor)
+                    this.addStyleForPost(thirdPostOfThirdVerticalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -204,14 +213,17 @@ class VerticalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfFirstVerticalAuthor:
                     this.addStyleForPost(firstPostOfFirstVerticalAuthor)
+                    this.addStyleForPost(firstPostOfFirstHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfFirstVerticalAuthor:
                     this.addStyleForPost(secondPostOfFirstVerticalAuthor)
+                    this.addStyleForPost(secondPostOfFirstHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfFirstVerticalAuthor:
                     this.addStyleForPost(thirdPostOfFirstVerticalAuthor)
+                    this.addStyleForPost(thirdPostOfFirstHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -233,14 +245,17 @@ class VerticalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfSecondVerticalAuthor:
                     this.addStyleForPost(firstPostOfSecondVerticalAuthor)
+                    this.addStyleForPost(firstPostOfSecondHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfSecondVerticalAuthor:
                     this.addStyleForPost(secondPostOfSecondVerticalAuthor)
+                    this.addStyleForPost(secondPostOfSecondHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfSecondVerticalAuthor:
                     this.addStyleForPost(thirdPostOfSecondVerticalAuthor)
+                    this.addStyleForPost(thirdPostOfSecondHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -262,14 +277,17 @@ class VerticalMenu {
                 switch (e.currentTarget.id) {
                   case firstPostOfThirdVerticalAuthor:
                     this.addStyleForPost(firstPostOfThirdVerticalAuthor)
+                    this.addStyleForPost(firstPostOfThirdHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case secondPostOfThirdVerticalAuthor:
                     this.addStyleForPost(secondPostOfThirdVerticalAuthor)
+                    this.addStyleForPost(secondPostOfThirdHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                   case thirdPostOfThirdVerticalAuthor:
                     this.addStyleForPost(thirdPostOfThirdVerticalAuthor)
+                    this.addStyleForPost(thirdPostOfThirdHorizontalAuthor)
                     this.mediator.showPost(e.currentTarget.id)
                     break
                 }
@@ -309,76 +327,75 @@ class Screen {
     switch (id) {
       case firstPostOfFirstHorizontalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfFirstHorizontalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfFirstHorizontalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
       case firstPostOfSecondHorizontalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfSecondHorizontalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfSecondHorizontalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
       case firstPostOfThirdHorizontalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfThirdHorizontalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfThirdHorizontalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
-
       case firstPostOfFirstVerticalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfFirstVerticalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfFirstVerticalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
       case firstPostOfSecondVerticalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfSecondVerticalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfSecondVerticalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
       case firstPostOfThirdVerticalAuthor :
         this.title.innerText = 'Post 1'
-        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        this.paragraph.innerText = 'Description...'
         break
       case secondPostOfThirdVerticalAuthor :
         this.title.innerText = 'Post 2'
-        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        this.paragraph.innerText = 'Description...'
         break
       case thirdPostOfThirdVerticalAuthor :
         this.title.innerText = 'Post 3'
-        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
+        this.paragraph.innerText = 'Description...'
         break
     }
   }
