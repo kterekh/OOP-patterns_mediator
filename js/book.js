@@ -5,60 +5,72 @@ function defaultStyle (uls, blocks) {
 
 function defaultStyleForPosts (posts) {
   Array.from(posts).forEach(post => post.style.color = 'black')
-  Array.from(posts).forEach(post => post.style.fonrWeight = 'normal')
+  Array.from(posts).forEach(post => post.style.fontWeight = 'normal')
 }
 
 class HorizontalMenu {
-  constructor () {
-    this.btns = document.querySelectorAll('.author')
+  constructor (mediator) {
+    this.horizontalBtns = document.querySelectorAll('.horizontalAuthor')
     this.uls = document.getElementsByTagName('ul')
     this.lis = document.getElementsByTagName('li')
     this.postsOfFirstAuthor = document.querySelectorAll('#fhu > li')
+    this.mediator = mediator
     this.dropDown()
   }
 
-  dropDown () {
-    this.btns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        if (this.uls && this.btns) {
-          defaultStyle(this.uls, this.btns)
-        }
-        switch (e.target.id) {
-          case firstHorizontalBlock:
-            document.getElementById(firstHorizontalUl).style.display = displayType
-            document.getElementById(firstPostOfFirstHorizontalAuthor).style.color = fontColor
-            document.getElementById(firstPostOfFirstHorizontalAuthor).style.fontWeight = fontWeight
-            document.getElementById(firstHorizontalBlock).style.border = blockStyle
-            mediator.updateVerticalMenu(e.target.id)
+  addStyleToHorizontalItem (ul, post, block) {
+    document.getElementById(ul).style.display = displayType
+    document.getElementById(post).style.color = fontColor
+    document.getElementById(post).style.fontWeight = fontWeight
+    document.getElementById(block).style.border = blockStyle
+  }
 
+  addStyleForPost (post) {
+    document.getElementById(post).style.color = fontColor
+    document.getElementById(post).style.fontWeight = fontWeight
+  }
+
+  dropDown () {
+    this.horizontalBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (this.uls && this.horizontalBtns) {
+          defaultStyle(this.uls, this.horizontalBtns)
+        }
+        switch (e.currentTarget.id) {
+          case firstHorizontalBlock:
+            this.addStyleToHorizontalItem(firstHorizontalUl, firstPostOfFirstHorizontalAuthor, firstHorizontalBlock)
+            this.mediator.updateVerticalMenu(e.currentTarget.id)
+            // logic for posts inside author
             this.postsOfFirstAuthor.forEach(post => {
               post.addEventListener('click', (e) => {
                 if (this.lis) {
                   defaultStyleForPosts(this.lis)
                 }
-                switch (e.target.id) {
+                switch (e.currentTarget.id) {
+                  case firstPostOfFirstHorizontalAuthor:
+                    this.addStyleForPost(firstPostOfFirstHorizontalAuthor)
+                    this.mediator.showPost(e.currentTarget.id)
+                    break
                   case secondPostOfFirstHorizontalAuthor:
-                    document.getElementById(firstHorizontalUl).style.display = displayType
-                    document.getElementById(secondPostOfFirstHorizontalAuthor).style.color = fontColor
-                    document.getElementById(secondPostOfFirstHorizontalAuthor).style.fontWeight = fontWeight
+                    this.addStyleForPost(secondPostOfFirstHorizontalAuthor)
+                    this.mediator.showPost(e.currentTarget.id)
+                    break
+                  case thirdPostOfFirstHorizontalAuthor:
+                    this.addStyleForPost(thirdPostOfFirstHorizontalAuthor)
+                    this.mediator.showPost(e.currentTarget.id)
+                    break
                 }
               })
             })
-
+            // end of logic for posts inside author
             break
           case secondHorizontalBlock:
-            document.getElementById(secondHorizontalUl).style.display = displayType
-            document.getElementById(firstPostOfSecondHorizontalAuthor).style.color = fontColor
-            document.getElementById(firstPostOfSecondHorizontalAuthor).style.fontWeight = fontWeight
-            document.getElementById(secondHorizontalBlock).style.border = blockStyle
-            mediator.updateVerticalMenu(e.target.id)
+            this.addStyleToHorizontalItem(secondHorizontalUl, firstPostOfSecondHorizontalAuthor, secondHorizontalBlock)
+            this.mediator.updateVerticalMenu(e.currentTarget.id)
             break
           case thirdHorizontalBlock:
-            document.getElementById(thirdHorizontalUl).style.display = displayType
-            document.getElementById(firstPostOfThirdHorizontalAuthor).style.color = fontColor
-            document.getElementById(firstPostOfThirdHorizontalAuthor).style.fontWeight = fontWeight
-            document.getElementById(thirdHorizontalBlock).style.border = blockStyle
-            mediator.updateVerticalMenu(e.target.id)
+            this.addStyleToHorizontalItem(thirdHorizontalUl, firstPostOfThirdHorizontalAuthor, thirdHorizontalBlock)
+            this.mediator.updateVerticalMenu(e.currentTarget.id)
             break
         }
       })
@@ -68,31 +80,29 @@ class HorizontalMenu {
 
 class VerticalMenu {
 
-  constructor () {
-    this.btns = document.querySelectorAll('.author')
+  constructor (mediator) {
+    this.verticalBtns = document.querySelectorAll('.verticalAuthor')
+    this.mediator = mediator
     this.dropDown()
-
   }
 
-  dropDown (e) {
-    switch (e) {
+  addStyleToVerticalItem (ul, post, block) {
+    document.getElementById(ul).style.display = displayType
+    document.getElementById(post).style.color = fontColor
+    document.getElementById(post).style.fontWeight = fontWeight
+    document.getElementById(block).style.border = blockStyle
+  }
+
+  dropDown (id) {
+    switch (id) {
       case firstHorizontalBlock:
-        document.getElementById(firstVerticalUl).style.display = displayType
-        document.getElementById(firstPostOfFirstVerticalAuthor).style.color = fontColor
-        document.getElementById(firstPostOfFirstVerticalAuthor).style.fontWeight = fontWeight
-        document.getElementById(firstVerticalBlock).style.border = blockStyle
+        this.addStyleToVerticalItem(firstVerticalUl, firstPostOfFirstVerticalAuthor, firstVerticalBlock)
         break
       case secondHorizontalBlock:
-        document.getElementById(secondVerticalUl).style.display = displayType
-        document.getElementById(firstPostOfSecondVerticalAuthor).style.color = fontColor
-        document.getElementById(firstPostOfSecondVerticalAuthor).style.fontWeight = fontWeight
-        document.getElementById(secondVerticalBlock).style.border = blockStyle
+        this.addStyleToVerticalItem(secondVerticalUl, firstPostOfSecondVerticalAuthor, secondVerticalBlock)
         break
       case thirdHorizontalBlock:
-        document.getElementById(thirdVerticalUl).style.display = displayType
-        document.getElementById(firstPostOfThirdVerticalAuthor).style.color = fontColor
-        document.getElementById(firstPostOfThirdVerticalAuthor).style.fontWeight = fontWeight
-        document.getElementById(thirdVerticalBlock).style.border = blockStyle
+        this.addStyleToVerticalItem(thirdVerticalUl, firstPostOfThirdVerticalAuthor, thirdVerticalBlock)
         break
     }
   }
@@ -101,14 +111,23 @@ class VerticalMenu {
 class Screen {
 
   constructor () {
-    this.title = document.getElementsByClassName('title')
-    this.paragraph = document.getElementsByClassName('paragraph')
+    this.title = document.querySelector('.title')
+    this.paragraph = document.querySelector('.paragraph')
   }
 
-  displayData (e) {
-    switch (e) {
-      case '2hl' :
-        this.title.innerHTML = 'Post 2'
+  displayData (id) {
+    switch (id) {
+      case firstPostOfFirstHorizontalAuthor :
+        this.title.innerText = 'Post 1'
+        this.paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        break
+      case secondPostOfFirstHorizontalAuthor :
+        this.title.innerText = 'Post 2'
+        this.paragraph.innerText = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. '
+        break
+      case thirdPostOfFirstHorizontalAuthor :
+        this.title.innerText = 'Post 3'
+        this.paragraph.innerText = 'Condimentum lacinia quis vel eros. Sit amet massa vitae tortor condimentum. Urna nec tincidunt praesent semper. Duis ut diam quam nulla porttitor. Egestas quis ipsum suspendisse ultrices. Enim blandit volutpat maecenas volutpat. Gravida neque convallis a cras semper auctor neque vitae. '
     }
   }
 
@@ -120,21 +139,18 @@ class Mediator {
     this.horizontalMenu = new HorizontalMenu(this)
     this.verticalMenu = new VerticalMenu(this)
     this.screen = new Screen(this)
-    this.showPost()
-    this.updateVerticalMenu()
-    this.updateVerticalMenu()
   }
 
-  showPost (e) {
-    this.screen.displayData(e)
+  showPost (id) {
+    this.screen.displayData(id)
   }
 
-  updateVerticalMenu (e) {
-    this.verticalMenu.dropDown(e)
+  updateVerticalMenu (id) {
+    this.verticalMenu.dropDown(id)
   }
 
-  updateHorizontalMenu (e) {
-    this.horizontalMenu.dropDown(e)
+  updateHorizontalMenu (id) {
+    this.horizontalMenu.dropDown(id)
   }
 }
 
